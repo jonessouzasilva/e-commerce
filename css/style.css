@@ -379,3 +379,34 @@ header.active{
         clip-path: circle(144% at 100% 1%);
     }
 }
+
+@media (max-width: 614px){
+    .home-text{
+        padding: 15px;
+    }
+    .home-text h1{
+        font-size: 2rem;
+    }
+    .sobre{
+        text-align: center;
+    }
+    .sobre-img{
+        order: 2;
+    }
+}
+
+@media (max-width: 360px){
+    header{
+        padding: 11px 4%;
+    }
+    .header-icon .bx{
+        padding: 4px;
+    }
+    .home-text h1{
+        font-size: 1.8rem;
+    }
+    .sobre-text h2,
+    .heading h2{
+        font-size: 1.2rem;
+    }
+}
