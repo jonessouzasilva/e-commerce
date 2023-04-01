@@ -40,6 +40,10 @@ header{
     justify-content: space-between;
     z-index: 1000;
     padding: 18px 100px;
+    transition: 0.5s;
+}
+header.active{
+    box-shadow: var(--box-shadow);
 }
 .logo{
     display: flex;
@@ -244,7 +248,7 @@ header{
 }
 .novidades-container .box{
     padding: 20px;
-    box-decoration-break: var(--box-shadow);
+    box-shadow: var(--box-shadow);
     border-radius: 0.5rem;
     text-align: center;
 }
@@ -255,4 +259,123 @@ header{
     width: 70px;
     height: 70px;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.novidades-container .box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.novidades-container p{
+    font-size: 0.938rem;
+    margin: 0.5rem 0 0.5rem;
+}
+.novidades-container .box:hover{
+    background: var(--second-color);
+    transition: 0.2s all linear;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px, auto));
+    gap: 1.5rem;
+}
+.footer-box a{
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+.footer-box a:hover{
+   color: var(--main-color); 
+}
+.footer-box p{
+    font-size: 0.938rem;
+    margin-bottom: 10px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.social a .bx{
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 10px;
+    background: var(--second-color);
+    border-radius: 5rem;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+.footer-box h3{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contato{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.contato span{
+    display: flex;
+    align-items: center;
+}
+.contato i{
+    font-size: 20px;
+    margin-right: 1rem;
+}
+.copyright{
+    padding: 20px;
+    text-align: center;
+    background: var(--second-color);
+}
+
+@media (max-width: 1058px){
+    header{
+        padding: 16px 60px;
+    }
+    section{
+        padding: 50px 60px;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 16px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+    .produtos-container{
+        grid-template-columns: repeat(auto-fit,minmax(240px, auto));
+    }
+}
+
+@media (max-width: 768px){
+    header{
+        padding: 12px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        transition: 0.4s all linear;
+        text-align: center;
+        clip-path: circle(0% at 100% 1%);
+    }
+    .navbar.active{
+        clip-path: circle(144% at 100% 1%);
+    }
 }
